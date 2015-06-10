@@ -106,9 +106,9 @@ defmodule Mix.Tasks.Compile.Asn1 do
     for source <- sourcesByModule do
       module = module_from_asn( List.first (List.wrap(source)))
       if force || Mix.Utils.stale?(List.wrap(source), module_files(dest_dir, module)) do
-        {:stale, source, Path.join(dest_dir,module)}
+        {:stale, List.wrap(source), Path.join(dest_dir,module)}
       else
-        {:ok, source, Path.join(dest_dir,module)}
+        {:ok, List.wrap(source), Path.join(dest_dir,module)}
       end
     end
   end
