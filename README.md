@@ -11,9 +11,9 @@ Add the following line on the project function of mix.exs file:
 
 and asn1ex as a dependency:
 
-- `{:asn1ex, git: "git://github.com/vicentfg/asn1ex.git"}`
+- `{:asn1ex, git: "git://github.com/OvermindDL1/asn1ex.git"}`
 
-Other configuration options:
+Other configuration options, added within the project list in mix.exs:
 
 - `:asn1_paths` - directories to find source files. Defaults to `["asn1"]`.
 
